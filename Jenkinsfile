@@ -11,5 +11,10 @@ pipeline{
                 sh "pip install --user -r requirements.txt"
             }
         }
+        stage("test"){
+            steps{
+                sh "python manage.py test"
+            }
+        }
     }
 }
